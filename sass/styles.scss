@@ -1,0 +1,196 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+// Import font!
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+$basic-color: #E0DACF;
+$primary-color: #D76957;
+$third-color: #D64F43;
+$bold-color: #C0322D;
+$fifth-color: #BF3830;
+
+$white: #fff;
+
+$logo-base: #25a98d;
+$logo-detail: #f8742a;
+
+
+.main-body {
+  @include make-row();
+  .sidebar {
+    @include make-sm-column( 2 );
+  }
+  .main-content {
+    @include make-sm-column( 10 );
+  }
+  $grid-columns: 10;
+  .item {
+    @include make-row();
+    .avatars {
+      @include make-sm-column( 2 );
+    }
+    .content {
+      @include make-sm-column( 8 );
+    }
+  }
+  $grid-columns: 10;
+  .header {
+  	@include make-row();
+  	.header-action {
+      @include make-sm-column( 10 );
+    }
+  }
+  $grid-columns: 10;
+  .header-contact {
+  	@include make-row();
+  	.header-select {
+      @include make-sm-column( 4 );
+    }
+    .header-input {
+      @include make-sm-column( 6 );
+    }
+    .header-submit {
+      @include make-sm-column( 2 );
+    }
+  }
+  $grid-columns: 10;
+  .header-index {
+  	@include make-row();
+  	.header-index-select {
+      @include make-sm-column( 3 );
+    }
+  }
+  $grid-columns: 12;
+}
+
+.main-body, .sidebar, .main-content, .item, .avatars .content{
+	border: 0px solid ;
+}
+
+body {
+	background: $basic-color;
+}
+h1, h2{
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	color: $white;
+}
+h2 {
+	font-size: 1.5em;
+}
+
+.sidebar h1 {
+	width: 80%;
+	font-size: 1.5em;
+	text-align: center;
+	margin: 30px auto 30px auto;
+	padding-bottom:  30px;
+
+
+	small {
+		a {
+			color: $logo-detail;
+		}
+	}
+}
+.sidebar {
+	ul {
+		margin: 0;
+		padding: 0;
+		li { 
+			width: 80%;
+			color: $white;
+			text-align: center;
+			list-style: none;
+			text-transform: uppercase;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			margin: 0 auto 0;
+			border-top: 1px solid $white;
+			 
+			font-size: 1.5em;
+			small {
+				font-size: 0.5em;
+			}
+			a {
+				color: $logo-base;
+			}
+		}
+	}
+}
+
+.header {
+	background: $primary-color;
+	padding: 20px 0 20px 0;
+}
+.header-contact {
+	background: $third-color;
+	padding: 20px 0 20px 0;
+}
+.main-logo {
+	width: 100%;
+	}
+
+.form-control {
+	background: $primary-color; 
+	color: #fff;
+	border-radius: 20px;
+	height: 40px;
+}
+.form-control::-webkit-input-placeholder {
+   color: $white;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: $white;  
+}
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: $white;  
+}
+.form-control:-ms-input-placeholder {  
+   color: $white;  
+}
+.form-control select {
+	border-radius: 20px;
+}
+
+.header-index {
+	padding: 10px;
+	background: $logo-base;
+}
+
+.header-index-select {
+	text-align: center;
+	background: #13262B;
+	/*border-right: 1px solid #ffffff;*/
+	padding: 20px;
+}
+.header-index-select:first-child {
+	text-align: left;
+}
+.header-index-select:last-child {
+	border: none;
+}
+.header-index-select h2 {
+	border-right: 1px solid $white;
+}
+.header-index-select:last-child h2 {
+	border: none;
+}
+
+.item, .header-index, .header-contact, .header {
+	border-left: 0px solid $white; 
+} 
+
+.item {
+	padding: 40px;
+}
